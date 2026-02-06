@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 import bgHome from "@/public/bgHome.png";
+import me1 from "@/public/me1.png";
+import me2 from "@/public/me2.jpeg";
 
 export default function Home() {
 
@@ -11,6 +13,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center  bg-zinc-50 font-sans dark:bg-black overflow-x-hidden">
       <main className="flex flex-col min-h-screen w-full max-w-screen h-1000 ">
+
         <Image src={bgHome} alt="home" className="min-w-screen max-h-320 rounded-b-[100px] z-10" />
         <div className="flex flex-col justify-between absolute min-h-screen max-w-screen w-full z-11">
           <ul className="flex justify-between items-start w-full p-10 ">
@@ -76,8 +79,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-white/10 w-full h-120 -mt-20 rounded-b-[100px] flex justify-center items-start">
-          <div className="grid grid-cols-4 mt-15 w-450">
+        <div className="bg-[#151515] w-full h-120 -mt-20 rounded-b-[100px] flex justify-center items-start z-9">
+          <div className="grid grid-cols-4 mt-15 w-450 p-10">
             <div className="col-span-1 flex flex-col justify-between items-center ">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" className="size-40 mt-20 opacity-50">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
@@ -110,6 +113,62 @@ export default function Home() {
           </div>
 
         </div>
+        <div className=" absolute top-300  w-full h-full bg-[radial-gradient(circle_farthest-side_at_top,rgba(150,0,0,0.7),#000)]"></div>
+
+
+
+
+
+        <section className="w-full h-full flex justify-center z-10">
+          <div className="container  w-full h-full pt-50">
+            <div className="grid grid-cols-2">
+              <div className="col-span-1 relative">
+                <Image src={me2} alt="" className="absolute w-80 h-120 rounded-[25px] -rotate-25 -left-20" />
+                <Image src={me1} alt="" className="absolute w-80 h-120 rounded-[25px] rotate-25 top-50 left-60" />
+              </div>
+              <div className="col-span-1">
+                <div className="flex flex-col">
+                  <h1 className="text-7xl font-extrabold ">Aldian</h1>
+                  <h1 className="text-5xl font-semibold text-orange-700">Octavius Soesanto</h1>
+                </div>
+                <div className="font-semibold mt-10">
+                  <h1 className="line-clamp-5 text-lg text-white/50">
+                    My name is Aldian Octavius Soesanto, and I am 22 years old. I live in Purbalingga, central java, and I am currently a fresh graduate of bachelor informatics degree with a strong interest in technology and continuous learning. I enjoy exploring new topics, improving my skills, and working on small projects that help me grow personally and professionally.
+                  </h1>
+                </div>
+
+                <div className="mt-10">
+                  <h1 className="text-5xl font-semibold text-orange-700">Education</h1>
+                  <div className="flex justify-between items-start py-10 font-semibold">
+                    <h1 className="text-white/50">
+                      Univeristy of Santa Dharma <br /> Bachelor of Informatics Degree - GPA 3.73/4
+                    </h1>
+                    <h1 className="text-white/50">
+                      Sep 22 - Jan 26
+                    </h1>
+                  </div>
+                </div>
+
+                <div className="mt-10">
+                  <h1 className="text-5xl font-semibold text-orange-700">Language</h1>
+
+                  <div className="mt-10 flex justify-between items-center font-semibold text-white/50">
+                    <h1>
+                      Bahasa Indonesia - Fluent
+                    </h1>
+                    <h1>
+                      English - Beginner
+                    </h1>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+        </section>
 
       </main>
     </div>
