@@ -5,10 +5,28 @@ import { useState } from "react";
 import bgHome from "@/public/bgHome.png";
 import me1 from "@/public/me1.png";
 import me2 from "@/public/me2.jpeg";
+import skl1 from "@/public/Skills/jav.svg";
+import skl2 from "@/public/Skills/php.svg";
+import skl3 from "@/public/Skills/bs.svg";
+import skl4 from "@/public/Skills/css.svg";
+import skl5 from "@/public/Skills/html.svg";
+import skl6 from "@/public/Skills/js.svg";
+import skl7 from "@/public/Skills/laravel.svg";
+import skl8 from "@/public/Skills/mysql.svg";
+import skl9 from "@/public/Skills/next.svg";
+import skl10 from "@/public/Skills/node.svg";
+import skl11 from "@/public/Skills/py.svg";
+import skl12 from "@/public/Skills/react.svg";
+import skl13 from "@/public/Skills/tailwind.svg";
+import skl14 from "@/public/Skills/ts.svg";
+
+import sm1 from "@/public/socialMedia/instagram.svg";
+import sm2 from "@/public/socialMedia/twitter-x.svg";
+import sm3 from "@/public/socialMedia/tiktok.svg";
+import sm4 from "@/public/socialMedia/whatsapp.svg";
+import sm5 from "@/public/socialMedia/linkedin.svg";
 
 export default function Home() {
-
-
 
   return (
     <div className="flex min-h-screen items-center justify-center  bg-zinc-50 font-sans dark:bg-black overflow-x-hidden">
@@ -119,7 +137,7 @@ export default function Home() {
 
 
 
-        <section className="w-full h-full flex justify-center z-10">
+        <section className="w-full h-fit flex justify-center z-10 my-30 ">
           <div className="container  w-full h-full pt-50">
             <div className="grid grid-cols-2">
               <div className="col-span-1 relative">
@@ -166,7 +184,135 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="flex flex-col justify-center items-center w-full h-fit mt-50">
+              <h1 className="text-5xl font-semibold text-orange-700">Skills</h1>
+              <div className="mt-10 bg-[#151515] w-full h-35 rounded-[40px] py-2 px-15 overflow-x-scroll overflow-y-hidden no-scrollbar -scroll-mb-10">
+                <div className="grid grid-cols-14 w-500 h-fit pt-3">
 
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl1} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl2} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl3} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl4} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl5} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl6} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl7} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl8} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl9} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl10} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl11} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl12} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl13} alt="" className=" w-15 h-fit" />
+                  </div>
+                  <div className="col-span-1 bg-[#333333] flex justify-center items-center w-25 h-25 rounded-2xl">
+                    <Image src={skl14} alt="" className=" w-15 h-fit" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col justify-center items-center w-full h-fit my-30">
+          <div className="container w-full h-full pt-50 ">
+            <h1 className="text-9xl text-center font-extrabold">My Recap Projects</h1>
+            <div className="flex justify-center items-center my-20 gap-10">
+              <div className="w-100 h-190 bg-white"></div> {/* img 1 */}
+              <div className="flex flex-col justify-center items-center gap-10">
+                <div className="flex justify-center items-center gap-10">
+                  <div className="w-270 h-90 bg-white"></div> {/* img 2 */}
+                </div>
+                <div className="flex justify-center items-center gap-10">
+                  <div className="w-83 h-90 bg-white"></div> {/* img 3 */}
+                  <div className="w-83 h-90 bg-white"></div> {/* img 4 */}
+                  <div className="w-83 h-90 bg-white"></div> {/* img 5 */}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <section className="flex flex-col justify-center items-center w-full h-fit my-30">
+          <div className="container w-full h-full py-50">
+            <h1 className="text-7xl font-semibold">Lets Get A Talk ! </h1>
+
+            <div className="grid grid-cols-2 w-full h-fit mt-25">
+              <div className="grid col-span-1 gap-20">
+                <div className="flex flex-col justify-center items-start gap-5">
+                  <label htmlFor="emailField" className="text-2xl font-semibold">Email</label>
+                  <input type="email" name="email" id="emailField" className="bg-[#151515] w-full h-10 rounded-xl px-5" placeholder="Your Email (e.g abdul@gmail.com)" />
+                </div>
+                <div className="flex flex-col justify-center items-start gap-5">
+                  <label htmlFor="emailField" className="text-2xl font-semibold">Message</label>
+                  <textarea name="message" id="messageField" className="bg-[#151515] w-full h-50 rounded-xl p-5" placeholder="Lets keep in touch"></textarea>
+                </div>
+                <button type="submit" className="w-fit h-fit px-15 py-3 rounded-2xl font-semibold hover:bg-gray-900 cursor-pointer bg-[#151515]">Submit</button>
+              </div>
+              <div className="grid cols-span-1 p-5">
+                <h1 className="text-center font-semibold text-5xl">Or maybe try another ways</h1>
+                <div className="grid grid-cols-2 gap-5">
+                  <div className="col-span-1 flex flex-col justify-between items-start px-5">
+                    <div className="flex justify-center items-center gap-5">
+                      <Image src={sm1} alt="" className="invert size-15" />
+                      <h1 className="text-white font-semibold text-2xl">@Corneldiii</h1>
+                    </div>
+                    <div className="flex justify-center items-center gap-5">
+                      <Image src={sm2} alt="" className="invert size-15" />
+                      <h1 className="text-white font-semibold text-2xl">@nyamukBerisik</h1>
+                    </div>
+                    <div className="flex justify-center items-center gap-5">
+                      <Image src={sm4} alt="" className="invert size-15" />
+                      <h1 className="text-white font-semibold text-2xl">+62 85640835130</h1>
+                    </div>
+                  </div>
+                  <div className="col-span-1 flex flex-col justify-between items-start px-5">
+                    <div className="flex justify-center items-center gap-5">
+                      <Image src={sm3} alt="" className="invert size-15" />
+                      <h1 className="text-white font-semibold text-2xl">@tireknodon</h1>
+                    </div>
+                    <div className="flex justify-center items-center gap-5">
+                      <Image src={sm5} alt="" className="invert size-15" />
+                      <h1 className="text-white font-semibold text-2xl">Aldian Octavius</h1>
+                    </div>
+                    <div className="flex justify-center items-center gap-5">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" className="size-15">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                      </svg>
+
+                      <h1 className="text-white font-semibold text-2xl">aldianocta178@gmail.com</h1>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
