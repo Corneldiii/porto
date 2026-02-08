@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { Resend } from 'resend';
+import Modal from "./component/modal";
 
 import bgHome from "@/public/bgHome.png";
 import me1 from "@/public/me1.png";
@@ -26,11 +28,75 @@ import sm3 from "@/public/socialMedia/tiktok.svg";
 import sm4 from "@/public/socialMedia/whatsapp.svg";
 import sm5 from "@/public/socialMedia/linkedin.svg";
 
+import L1 from "@/public/projects/Lokerin/L1.png"
+import L2 from "@/public/projects/Lokerin/L2.png"
+import L3 from "@/public/projects/Lokerin/L3.png"
+import L4 from "@/public/projects/Lokerin/L4.png"
+
+import R1 from "@/public/projects/Resep/R1.png"
+import R2 from "@/public/projects/Resep/R2.png"
+import R3 from "@/public/projects/Resep/R3.png"
+import R4 from "@/public/projects/Resep/R4.png"
+
+import B1 from "@/public/projects/SIGBanyumas/B1.png"
+import B2 from "@/public/projects/SIGBanyumas/B2.png"
+import B3 from "@/public/projects/SIGBanyumas/B3.png"
+import B4 from "@/public/projects/SIGBanyumas/B4.png"
+import Link from "next/link";
+
+
 export default function Home() {
+
+
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [open, setOpen] = useState({
+    data: NaN,
+    status: false
+  });
+
+  const project = [
+    {
+      img: [L1, L2, L3, L4],
+      desc: "cekcekckekcekke"
+
+    },
+    {
+      img: [R1, R2, R3, R4],
+      desc: "cocokcockock"
+    },
+    {
+      img: [B1, B2, B3, B4],
+      desc: "cikcickcick"
+    }
+
+  ]
+
+  async function sendEmail(e: any) {
+    e.preventDefault();
+
+    const res = await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify({
+        from: email,
+        subject: "Hai Lets Talk!",
+        message: message,
+      }),
+    })
+
+    const status = await res.json()
+    if (status) {
+      setEmail("")
+      setMessage("")
+    }
+    console.log(status)
+
+
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center  bg-zinc-50 font-sans dark:bg-black overflow-x-hidden">
-      <main className="flex flex-col min-h-screen w-full max-w-screen h-1000 ">
+      <main className="relative flex flex-col min-h-screen w-full max-w-screen h-1000 ">
 
         <Image src={bgHome} alt="home" className="min-w-screen max-h-320 rounded-b-[100px] z-10" />
         <div className="flex flex-col justify-between absolute min-h-screen max-w-screen w-full z-11">
@@ -40,16 +106,19 @@ export default function Home() {
                 Portofolio
               </li>
               <div className="w-0.5 h-8 bg-white"></div>
-              <li className="font-semibold text-2xl opacity-50">Home</li>
-              <li className="font-semibold text-2xl opacity-50">About</li>
-              <li className="font-semibold text-2xl opacity-50">Projects</li>
+              <li className="font-semibold text-2xl opacity-50" ><Link href="#">Home</Link> </li>
+              <li className="font-semibold text-2xl opacity-50"><Link href="#about">About</Link></li>
+              <li className="font-semibold text-2xl opacity-50"><Link href="#projects">Projects</Link></li>
+
             </div>
             <div className="w-45 h-13 bg-white rounded-4xl flex justify-between items-center px-5">
               <h1 className="font-semibold text-black ">Get in touch</h1>
               <div className="rounded-full bg-orange-700  w-8 h-8 flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
+                <Link href="#getintouch">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                  </svg>
+                </Link>
               </div>
 
             </div>
@@ -131,13 +200,13 @@ export default function Home() {
           </div>
 
         </div>
-        <div className=" absolute top-300  w-full h-full bg-[radial-gradient(circle_farthest-side_at_top,rgba(150,0,0,0.7),#000)]"></div>
+        <div className=" absolute top-300  w-full h-300 bg-[radial-gradient(circle_farthest-side_at_top,rgba(150,0,0,0.7),#000)]"></div>
 
 
 
 
 
-        <section className="w-full h-fit flex justify-center z-10 my-30 ">
+        <section className="w-full h-fit flex justify-center z-40 my-30 " id="about">
           <div className="container  w-full h-full pt-50">
             <div className="grid grid-cols-2">
               <div className="col-span-1 relative">
@@ -237,19 +306,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col justify-center items-center w-full h-fit my-30">
+        <section className="flex flex-col justify-center items-center w-full h-fit my-30" id="projects">
           <div className="container w-full h-full pt-50 ">
             <h1 className="text-9xl text-center font-extrabold">My Recap Projects</h1>
             <div className="flex justify-center items-center my-20 gap-10">
-              <div className="w-100 h-190 bg-white"></div> {/* img 1 */}
+              {/* <div className="w-100 h-190 bg-white cursor-pointer" onClick={() => setOpen({ data: 1, status: true })}></div> img 1 */}
+              <Image src={project[1]?.img[0]} alt="" className="w-100 h-190 object-left object-cover cursor-pointer" onClick={() => setOpen({ data: 1, status: true })} />
               <div className="flex flex-col justify-center items-center gap-10">
                 <div className="flex justify-center items-center gap-10">
-                  <div className="w-270 h-90 bg-white"></div> {/* img 2 */}
+                  <Image src={project[0]?.img[0]} alt="" className=" w-270 h-90 object-cover object-top  cursor-pointer" onClick={() => setOpen({ data: 0, status: true })} />
                 </div>
                 <div className="flex justify-center items-center gap-10">
-                  <div className="w-83 h-90 bg-white"></div> {/* img 3 */}
-                  <div className="w-83 h-90 bg-white"></div> {/* img 4 */}
-                  <div className="w-83 h-90 bg-white"></div> {/* img 5 */}
+                  <Image src={project[2]?.img[0]} alt="" className="w-83 h-90 bg-white object-cover object-right cursor-pointer" onClick={() => setOpen({ data: 2, status: true })} />
+                  <Image src={project[2]?.img[0]} alt="" className="w-83 h-90 bg-white object-cover object-right cursor-pointer" onClick={() => setOpen({ data: 2, status: true })} />
+                  <Image src={project[2]?.img[0]} alt="" className="w-83 h-90 bg-white object-cover object-right cursor-pointer" onClick={() => setOpen({ data: 2, status: true })} />
                 </div>
               </div>
             </div>
@@ -258,7 +328,7 @@ export default function Home() {
         </section>
 
 
-        <section className="flex flex-col justify-center items-center w-full h-fit my-30">
+        <section className="flex flex-col justify-center items-center w-full h-fit my-30" id="getintouch">
           <div className="container w-full h-full py-50">
             <h1 className="text-7xl font-semibold">Lets Get A Talk ! </h1>
 
@@ -266,21 +336,24 @@ export default function Home() {
               <div className="grid col-span-1 gap-20">
                 <div className="flex flex-col justify-center items-start gap-5">
                   <label htmlFor="emailField" className="text-2xl font-semibold">Email</label>
-                  <input type="email" name="email" id="emailField" className="bg-[#151515] w-full h-10 rounded-xl px-5" placeholder="Your Email (e.g abdul@gmail.com)" />
+                  <input type="email" name="email" id="emailField" className="bg-[#151515] w-full h-10 rounded-xl px-5" placeholder="Your Email (e.g abdul@gmail.com)" onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="flex flex-col justify-center items-start gap-5">
                   <label htmlFor="emailField" className="text-2xl font-semibold">Message</label>
-                  <textarea name="message" id="messageField" className="bg-[#151515] w-full h-50 rounded-xl p-5" placeholder="Lets keep in touch"></textarea>
+                  <textarea name="message" id="messageField" className="bg-[#151515] w-full h-50 rounded-xl p-5" placeholder="Lets keep in touch" onChange={(e) => setMessage(e.target.value)}></textarea>
                 </div>
-                <button type="submit" className="w-fit h-fit px-15 py-3 rounded-2xl font-semibold hover:bg-gray-900 cursor-pointer bg-[#151515]">Submit</button>
+                <button type="submit" className="w-fit h-fit px-15 py-3 rounded-2xl font-semibold hover:bg-gray-900 cursor-pointer bg-[#151515]" onClick={sendEmail}>Submit</button>
               </div>
+
               <div className="grid cols-span-1 p-5">
                 <h1 className="text-center font-semibold text-5xl">Or maybe try another ways</h1>
                 <div className="grid grid-cols-2 gap-5">
                   <div className="col-span-1 flex flex-col justify-between items-start px-5">
                     <div className="flex justify-center items-center gap-5">
-                      <Image src={sm1} alt="" className="invert size-15" />
-                      <h1 className="text-white font-semibold text-2xl">@Corneldiii</h1>
+                      <a href="https://www.instagram.com/corneldiii/" className="flex justify-center items-center gap-5">
+                        <Image src={sm1} alt="" className="invert size-15 cursor-pointer" />
+                        <h1 className="text-white font-semibold text-2xl">@Corneldiii</h1>
+                      </a>
                     </div>
                     <div className="flex justify-center items-center gap-5">
                       <Image src={sm2} alt="" className="invert size-15" />
@@ -317,6 +390,27 @@ export default function Home() {
         </section>
 
       </main>
+      <Modal isOpen={open.status} onClose={() => setOpen({ data: NaN, status: false })}>
+        <div className="h-200 grid grid-cols-2 max-h-200">
+          <div className="col-span-1 flex flex-col justify-between items-center">
+            {/* <div className="bg-gray-500 w-full h-145"></div> */}
+            <Image src={project[open.data]?.img[0]} alt="" className="w-full h-145 border-solid border-black/60 border-2 object-cover" />
+            <div className="grid grid-cols-3 gap-5 w-full">
+              <Image src={project[open.data]?.img[1]} alt="" className=" col-span-1 w-full h-50 border-solid object-cover border-black/60 border-2" />
+              <Image src={project[open.data]?.img[2]} alt="" className=" col-span-1 w-full h-50 border-solid object-cover border-black/60 border-2" />
+              <Image src={project[open.data]?.img[3]} alt="" className=" col-span-1 w-full h-50 border-solid object-cover border-black/60 border-2" />
+            </div>
+          </div>
+          <div className="col-span-1 px-5">
+            <h1 className="text-black/80 font-semibold text-justify">
+              {project[open.data]?.desc}
+
+            </h1>
+
+          </div>
+
+        </div>
+      </Modal>
     </div>
   );
 }
