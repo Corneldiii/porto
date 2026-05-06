@@ -63,13 +63,13 @@ export default function Home() {
     {
       img: [R1, R2, R3, R4],
       judul: "Kumpulan Resep Masakan (Kuresep Masak)",
-      desc: "cekcekcke",
+      desc: "Kuresep Masak adalah platform yang menyajikan berbagai pilihan menu dan resep masakan, mulai dari hidangan sederhana hingga menu spesial. Pengguna bisa mencari inspirasi masakan, melihat bahan serta langkah pembuatannya, dan menemukan ide menu yang sesuai dengan kebutuhan sehari-hari. Platform ini membantu siapa pun memasak dengan lebih mudah, praktis, dan terarah.",
       teknologi: "Laravel"
     },
     {
       img: [B1, B2, B3, B4],
       judul: "Sistem Informasi Geografis (SIG Banyumas)",
-      desc: "cekcekcke",
+      desc: "SIG Banyumas adalah platform yang menyediakan informasi lokasi wisata secara interaktif, lengkap dengan peta digital, detail destinasi, hingga fitur pemesanan kunjungan. Pengguna dapat menjelajahi berbagai objek wisata, melihat rute terbaik melalui peta, serta melakukan booking secara langsung sehingga perencanaan perjalanan menjadi lebih mudah, cepat, dan terarah.",
       teknologi: "Laravel"
     },
   ];
