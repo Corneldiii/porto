@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./component/modal";
+import RollingText from "./component/RollingText"
 
 import bgHome from "@/public/bgHome.png";
 import me1 from "@/public/me1.png";
@@ -52,6 +53,17 @@ export default function Home() {
     data: NaN,
     status: false,
   });
+
+  const [title] = useState(["Software Developer", "Fullstack Developer", "System Analyst"])
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % title.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [title]);
 
   const project = [
     {
@@ -162,7 +174,9 @@ export default function Home() {
           <div className="absolute bottom-0 md:top-1/3 lg:top-[40%] lg:-translate-y-1/2 left-0 w-full px-5 md:px-10 lg:px-20 z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 pb-10 md:pb-0">
             <div className="font-semibold w-full  lg:w-[30%] flex  flex-col">
               <h1 className="text-white text-lg md:text-4xl lg:text-4xl mb-1 lg:mb-4">Hey, i'm a</h1>
-              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[90px] xl:text-[100px] lg:w-50 font-extrabold leading-tight md:leading-none tracking-tight">Software<br className="md:hidden lg:hidden" /> Developer</h1>
+
+
+              <RollingText title={title} currentIndex={currentIndex} />
 
               <h1 className="text-xl md:text-4xl lg:text-4xl text-[#FF4A11] mt-2 lg:mt-2 font-bold lg:w-full lg:text-right  lg:pr-2 xl:pr-4">Beginner</h1>
               <div className="w-16 h-0.5 bg-[#FF4A11] my-6 md:hidden"></div>
@@ -260,7 +274,7 @@ export default function Home() {
               <h1 className="text-3xl font-bold text-[#FF4A11]">Octavius Soesanto</h1>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-56 items-center">
 
               {/* Photo single rounded untuk mobile (menggantikan dua foto miring) */}
               <div className="block w-full lg:hidden">
@@ -481,24 +495,24 @@ export default function Home() {
                       <Image src={sm1} alt="Instagram" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
                       <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">@Corneldiii</h1>
                     </a>
-                    <div className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
+                    <a href="https://www.x.com/nyamukBerisik" className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
                       <Image src={sm2} alt="Twitter" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
                       <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">@nyamukBerisik</h1>
-                    </div>
+                    </a>
                     <div className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
                       <Image src={sm4} alt="WhatsApp" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
                       <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">+62 85640835130</h1>
                     </div>
                   </div>
                   <div className="flex flex-col gap-5 lg:gap-8">
-                    <div className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
+                    <a href="https://www.tiktok.com/@notmeiswearrrrr" className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
                       <Image src={sm3} alt="TikTok" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
                       <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">@tireknodon</h1>
-                    </div>
-                    <div className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
+                    </a>
+                    <a href="https://www.linkedin.com/in/aldian-soesanto-b7194531a/" className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
                       <Image src={sm5} alt="LinkedIn" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
                       <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">Aldian Octavius</h1>
-                    </div>
+                    </a>
                     <div className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 shrink-0 text-white group-hover:scale-110 group-hover:text-[#FF4A11] transition-all">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
