@@ -21,6 +21,10 @@ import skl11 from "@/public/Skills/py.svg";
 import skl12 from "@/public/Skills/react.svg";
 import skl13 from "@/public/Skills/tailwind.svg";
 import skl14 from "@/public/Skills/ts.svg";
+import skl15 from "@/public/Skills/Postman.svg";
+import skl16 from "@/public/Skills/Docker.svg";
+import skl17 from "@/public/Skills/CI.svg";
+import skl18 from "@/public/Skills/Git.svg";
 
 import sm1 from "@/public/socialMedia/instagram.svg";
 import sm2 from "@/public/socialMedia/twitter-x.svg";
@@ -42,6 +46,11 @@ import B1 from "@/public/projects/SIGBanyumas/B1.png";
 import B2 from "@/public/projects/SIGBanyumas/B2.png";
 import B3 from "@/public/projects/SIGBanyumas/B3.png";
 import B4 from "@/public/projects/SIGBanyumas/B4.png";
+
+import C1 from "@/public/projects/CashierCafe/C1.png";
+import C2 from "@/public/projects/CashierCafe/C2.png";
+import C3 from "@/public/projects/CashierCafe/C3.png";
+import C4 from "@/public/projects/CashierCafe/C4.png";
 import Link from "next/link";
 
 export default function Home() {
@@ -67,22 +76,32 @@ export default function Home() {
 
   const project = [
     {
-      img: [L1, L2, L3, L4],
-      judul: "Sistem Rekomendasi Pekerjaan (Lokerin)",
-      desc: "Lokerin adalah platform pencarian lowongan kerja yang berfokus pada pemberian rekomendasi pekerjaan paling relevan untuk setiap pengguna. Sistem ini menganalisis deskripsi lowongan serta profil atau minat pengguna, lalu menampilkan daftar peluang kerja yang paling sesuai secara otomatis. Dengan pendekatan rekomendasi yang dipersonalisasi, Lokerin membantu pencari kerja menemukan posisi yang tepat dengan lebih cepat, akurat, dan efisien.",
-      teknologi: "React Js (Tailwind) - Flask(Python)"
-    },
-    {
       img: [R1, R2, R3, R4],
       judul: "Kumpulan Resep Masakan (Kuresep Masak)",
       desc: "Kuresep Masak adalah platform yang menyajikan berbagai pilihan menu dan resep masakan, mulai dari hidangan sederhana hingga menu spesial. Pengguna bisa mencari inspirasi masakan, melihat bahan serta langkah pembuatannya, dan menemukan ide menu yang sesuai dengan kebutuhan sehari-hari. Platform ini membantu siapa pun memasak dengan lebih mudah, praktis, dan terarah.",
-      teknologi: "Laravel"
+      teknologi: "Laravel",
+      produksi : "May 2024 - Jun 2024"
+    },
+    {
+      img: [L1, L2, L3, L4],
+      judul: "Sistem Rekomendasi Pekerjaan (Lokerin)",
+      desc: "Lokerin adalah platform pencarian lowongan kerja yang berfokus pada pemberian rekomendasi pekerjaan paling relevan untuk setiap pengguna. Sistem ini menganalisis deskripsi lowongan serta profil atau minat pengguna, lalu menampilkan daftar peluang kerja yang paling sesuai secara otomatis. Dengan pendekatan rekomendasi yang dipersonalisasi, Lokerin membantu pencari kerja menemukan posisi yang tepat dengan lebih cepat, akurat, dan efisien.",
+      teknologi: "React Js (Tailwind) - Flask(Python)",
+      produksi:"Jun 2025 - Jan 2026"
     },
     {
       img: [B1, B2, B3, B4],
       judul: "Sistem Informasi Geografis (SIG Banyumas)",
       desc: "SIG Banyumas adalah platform yang menyediakan informasi lokasi wisata secara interaktif, lengkap dengan peta digital, detail destinasi, hingga fitur pemesanan kunjungan. Pengguna dapat menjelajahi berbagai objek wisata, melihat rute terbaik melalui peta, serta melakukan booking secara langsung sehingga perencanaan perjalanan menjadi lebih mudah, cepat, dan terarah.",
-      teknologi: "Laravel"
+      teknologi: "Laravel",
+      produksi: "10,Jul 2024 - 18,Jul 2024"
+    },
+    {
+      img: [C1, C2, C3, C4],
+      judul: "Cashier Café",
+      desc: "Cashier Café adalah sistem kasir sederhana yang dirancang untuk membantu proses transaksi di kafe menjadi lebih cepat, rapi, dan efisien. Fitur utamanya meliputi pencatatan pesanan, perhitungan total otomatis, pengelolaan menu, serta pencetakan struk. Sistem ini memudahkan barista dan kasir dalam melayani pelanggan, sekaligus membantu pemilik kafe memantau penjualan harian secara akurat.",
+      teknologi: "React JS (Tailwinds) - Laravel",
+      produksi:"Apr 2026 - Mei 2026"
     },
   ];
 
@@ -304,7 +323,7 @@ export default function Home() {
                 {/* Education Card */}
                 <div className="mb-8 lg:mb-12 w-full">
                   <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#FF4A11] mb-4 lg:mb-8">Education</h1>
-                  <div className="bg-[#121212] lg:bg-transparent lg:p-0 rounded-[24px] p-5 flex items-start gap-5 lg:flex-row lg:justify-between lg:items-center">
+                  <div className="bg-[#121212] lg:bg-transparent lg:p-0 rounded-3xl p-5 flex items-start gap-5 lg:flex-row lg:justify-between lg:items-center">
                     <div className="border border-[#FF4A11] rounded-full p-2 flex items-center justify-center flex-shrink-0 lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#FF4A11]"><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814" /></svg>
                     </div>
@@ -324,7 +343,7 @@ export default function Home() {
                 {/* Language Card */}
                 <div className="mb-10 w-full">
                   <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#FF4A11] mb-4 lg:mb-8">Language</h1>
-                  <div className="bg-[#121212] lg:bg-transparent lg:p-0 rounded-[24px] p-5 flex flex-col lg:flex-row lg:justify-between lg:items-center">
+                  <div className="bg-[#121212] lg:bg-transparent lg:p-0 rounded-3xl p-5 flex flex-col lg:flex-row lg:justify-between lg:items-center">
 
                     {/* Mobile Wrapper */}
                     <div className="flex justify-between items-center py-2 lg:hidden">
@@ -364,9 +383,9 @@ export default function Home() {
             {/* Skills */}
             <div className="flex flex-col justify-center items-start lg:items-center w-full h-fit mt-10 md:mt-20 lg:mt-32">
               <h1 className="text-xl md:text-4xl lg:text-[50px] font-bold text-[#FF4A11]">Skills</h1>
-              <div className="mt-6 lg:mt-12 bg-[#121212] lg:bg-transparent w-full rounded-[24px] md:rounded-[40px] py-4 px-4 md:px-8 lg:px-0 overflow-x-auto no-scrollbar lg:flex lg:justify-center">
+              <div className="mt-6 lg:mt-12 bg-[#121212] lg:bg-transparent w-full rounded-3xl md:rounded-[40px] py-4 px-4 md:px-8 lg:px-0 overflow-x-auto no-scrollbar lg:flex lg:justify-center">
                 <div className="flex gap-3 md:gap-4 lg:gap-8 w-max py-2 lg:flex-wrap lg:justify-center lg:max-w-6xl">
-                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14].map((skl, i) => (
+                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14,skl15,skl16,skl17,skl18].map((skl, i) => (
                     <div key={i} className="bg-[#1e1e1e] lg:bg-[#1a1a1a] flex justify-center items-center w-14 h-14 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-xl lg:rounded-3xl shrink-0 hover:scale-110 transition-transform cursor-pointer">
                       <Image src={skl} alt="" className="w-7 h-7 md:w-12 md:h-12 lg:w-14 lg:h-14" />
                     </div>
@@ -391,7 +410,7 @@ export default function Home() {
                   onClick={() => setOpen({ data: i, status: true })}
                 >
                   <Image src={p.img[0]} alt="" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-5">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end p-5">
                     <span className="text-white font-bold text-lg">Project {i + 1}</span>
                   </div>
                 </div>
@@ -539,14 +558,13 @@ export default function Home() {
         isOpen={open.status}
         onClose={() => {
           setOpen({ data: NaN, status: false });
-          setMainImgIdx(0); // Reset gambar utama kembali ke awal saat modal ditutup
+          setMainImgIdx(0); 
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[80vh] overflow-y-auto bg-[#1a1a1a] p-4 rounded-xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[90vh] overflow-y-auto bg-[#1a1a1a] p-4 rounded-xl">
           <div className="flex flex-col gap-3">
 
-            {/* ── GAMBAR UTAMA (INDUK) ── */}
-            <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden transition-all duration-300">
+            <div className="relative w-full h-64 md:h-106 rounded-xl overflow-hidden transition-all duration-300">
               {!isNaN(open.data) && (
                 <Image
                   src={project[open.data]?.img[mainImgIdx]}
@@ -557,7 +575,6 @@ export default function Home() {
               )}
             </div>
 
-            {/* ── GAMBAR ANAK (THUMBNAILS) ── */}
             <div className="grid grid-cols-3 gap-2">
               {!isNaN(open.data) && [0, 1, 2, 3]
                 .filter((idx) => idx !== mainImgIdx)
@@ -571,7 +588,7 @@ export default function Home() {
                       src={project[open.data]?.img[idx]}
                       alt=""
                       fill
-                      className="object-cover border border-[#333]"
+                      className="object-cover border border-[#333] "
                     />
                   </div>
                 ))}
@@ -592,6 +609,14 @@ export default function Home() {
               </h1>
               <h1 className="text-gray-400 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl">
                 {!isNaN(open.data) && project[open.data]?.teknologi}
+              </h1>
+            </div>
+            <div className="w-full h-fit flex flex-col justify-between items-start">
+              <h1 className="text-gray-50 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl lg:mt-10">
+                Produksi :
+              </h1>
+              <h1 className="text-gray-400 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl">
+                {!isNaN(open.data) && project[open.data]?.produksi}
               </h1>
             </div>
           </div>

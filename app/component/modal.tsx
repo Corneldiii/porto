@@ -18,7 +18,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         onClick={onClose}
       ></div>
 
-      <div className="relative bg-white rounded-lg shadow-xl p-6 w-90  lg:w-350 z-50 animate-fadeIn">
+      <div className="relative bg-white rounded-lg shadow-xl p-6 w-90  lg:w-400 z-50 animate-fadeIn">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-xl font-semibold text-black/60">Project Detail</h1>
           <button
