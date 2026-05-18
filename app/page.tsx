@@ -61,6 +61,9 @@ import Link from "next/link";
 export default function Home() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState("");
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const [mainImgIdx, setMainImgIdx] = useState(0);
   const [open, setOpen] = useState({
@@ -85,14 +88,14 @@ export default function Home() {
       judul: "Kumpulan Resep Masakan (Kuresep Masak)",
       desc: "Kuresep Masak adalah platform yang menyajikan berbagai pilihan menu dan resep masakan, mulai dari hidangan sederhana hingga menu spesial. Pengguna bisa mencari inspirasi masakan, melihat bahan serta langkah pembuatannya, dan menemukan ide menu yang sesuai dengan kebutuhan sehari-hari. Platform ini membantu siapa pun memasak dengan lebih mudah, praktis, dan terarah.",
       teknologi: "Laravel",
-      produksi : "May 2024 - Jun 2024"
+      produksi: "May 2024 - Jun 2024"
     },
     {
       img: [L1, L2, L3, L4],
       judul: "Sistem Rekomendasi Pekerjaan (Lokerin)",
       desc: "Lokerin adalah platform pencarian lowongan kerja yang berfokus pada pemberian rekomendasi pekerjaan paling relevan untuk setiap pengguna. Sistem ini menganalisis deskripsi lowongan serta profil atau minat pengguna, lalu menampilkan daftar peluang kerja yang paling sesuai secara otomatis. Dengan pendekatan rekomendasi yang dipersonalisasi, Lokerin membantu pencari kerja menemukan posisi yang tepat dengan lebih cepat, akurat, dan efisien.",
       teknologi: "React Js (Tailwind) - Flask(Python)",
-      produksi:"Jun 2025 - Jan 2026"
+      produksi: "Jun 2025 - Jan 2026"
     },
     {
       img: [B1, B2, B3, B4],
@@ -106,34 +109,56 @@ export default function Home() {
       judul: "Cashier Café",
       desc: "Cashier Café adalah sistem kasir sederhana yang dirancang untuk membantu proses transaksi di kafe menjadi lebih cepat, rapi, dan efisien. Fitur utamanya meliputi pencatatan pesanan, perhitungan total otomatis, pengelolaan menu, serta pencetakan struk. Sistem ini memudahkan barista dan kasir dalam melayani pelanggan, sekaligus membantu pemilik kafe memantau penjualan harian secara akurat.",
       teknologi: "React JS (Tailwinds) - Laravel",
-      produksi:"Apr 2026 - Mei 2026"
+      produksi: "Apr 2026 - Mei 2026"
     },
     {
       img: [G1, G2, G3, G4],
       judul: "Landing  Page Gereja Katolik Purbalingga",
       desc: "Landing Page Paroki Santo Agustinus Purbalingga adalah sebuah website yang dirancang untuk menyediakan informasi lengkap mengenai kehidupan menggereja di Paroki Santo Agustinus, Purbalingga. Website ini menampilkan profil paroki, sejarah singkat, serta informasi mengenai imam yang melayani, yaitu RD. FX. Handy Kristian Adi Putra, Pr., sebagai pastor paroki. Selain itu, landing page ini menyediakan ayat Alkitab harian dan renungan rohani yang diperbarui setiap hari untuk membantu umat bertumbuh dalam iman. Pengguna juga dapat melihat jadwal misa, baik misa harian maupun mingguan, serta berbagai aktivitas paroki seperti kegiatan kategorial, pelayanan sosial, dan perayaan liturgi. Proyek ini bertujuan menjadi pusat informasi digital yang mudah diakses, informatif, dan mendukung pelayanan paroki kepada umat serta masyarakat luas.",
       teknologi: "React JS (Tailwinds) - Laravel",
-      produksi:"Mei 2026 - On Going"
+      produksi: "May 2026 - May 2026"
     },
   ];
 
-  async function sendEmail(e: any) {
-    e.preventDefault();
-    const res = await fetch("/api/send", {
-      method: "POST",
-      body: JSON.stringify({
-        from: email,
-        subject: "Hai Lets Talk!",
-        message: message,
-      }),
-    });
-    const status = await res.json();
-    if (status) {
-      setEmail("");
-      setMessage("");
+  const sendEmail = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault(); 
+    
+    if (!email || !message) {
+      setStatus('Email dan pesan harus diisi dulu ya.');
+      return;
     }
-    console.log(status);
-  }
+
+    setIsSubmitting(true);
+    setStatus('');
+
+    try {
+      const endpoint = "https://formspree.io/f/mnjrqbry";
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          email: email,   
+          message: message
+        })
+      });
+
+      if (response.ok) {
+        setStatus("Pesan berhasil terkirim! 🚀");
+        setEmail("");
+        setMessage("");
+      } else {
+        setStatus("Waduh, gagal mengirim pesan. Coba lagi ya.");
+      }
+    } catch (error) {
+      setStatus("Terjadi kesalahan jaringan.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="flex min-h-screen justify-center bg-[#0a0a0a] text-white font-sans overflow-x-hidden">
@@ -203,9 +228,8 @@ export default function Home() {
 
           {/* ── HERO TEXT ── */}
           <div className="absolute bottom-0 md:top-1/3 lg:top-[40%] lg:-translate-y-1/2 left-0 w-full px-5 md:px-10 lg:px-20 z-20 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 pb-10 md:pb-0">
-            <div className="font-semibold w-full  lg:w-[30%] flex  flex-col">
+            <div className="font-semibold w-full  lg:w-[31%] flex  flex-col">
               <h1 className="text-white text-lg md:text-4xl lg:text-4xl mb-1 lg:mb-4">Hey, i'm a</h1>
-
 
               <RollingText title={title} currentIndex={currentIndex} />
 
@@ -397,7 +421,7 @@ export default function Home() {
               <h1 className="text-xl md:text-4xl lg:text-[50px] font-bold text-[#FF4A11]">Skills</h1>
               <div className="mt-6 lg:mt-12 bg-[#121212] lg:bg-transparent w-full rounded-3xl md:rounded-[40px] py-4 px-4 md:px-8 lg:px-0 overflow-x-auto no-scrollbar lg:flex lg:justify-center">
                 <div className="flex gap-3 md:gap-4 lg:gap-8 w-max py-2 lg:flex-wrap lg:justify-center lg:max-w-6xl">
-                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14,skl15,skl16,skl17,skl18].map((skl, i) => (
+                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14, skl15, skl16, skl17, skl18].map((skl, i) => (
                     <div key={i} className="bg-[#1e1e1e] lg:bg-[#1a1a1a] flex justify-center items-center w-14 h-14 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-xl lg:rounded-3xl shrink-0 hover:scale-110 transition-transform cursor-pointer">
                       <Image src={skl} alt="" className="w-7 h-7 md:w-12 md:h-12 lg:w-14 lg:h-14" />
                     </div>
@@ -510,11 +534,21 @@ export default function Home() {
                 </div>
                 <button
                   type="button"
-                  className="w-full md:w-fit px-10 py-4 lg:px-14 lg:py-5 lg:text-lg rounded-full font-bold hover:bg-[#e0400f] cursor-pointer bg-[#FF4A11] text-white transition-colors"
+                  disabled={isSubmitting}
+                  className={`w-full md:w-fit px-10 py-4 lg:px-14 lg:py-5 lg:text-lg rounded-full font-bold text-white transition-colors ${
+                    isSubmitting 
+                      ? 'bg-[#e0400f] opacity-70 cursor-not-allowed' 
+                      : 'bg-[#FF4A11] hover:bg-[#e0400f] cursor-pointer'
+                  }`}
                   onClick={sendEmail}
                 >
-                  Submit
+                  {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>
+                {status && (
+                  <p className={`text-sm mt-2 border-4 border-orange-800 rounded-4xl w-fit px-4 py-2 ${status.includes('berhasil') ? 'text-green-500' : 'text-red-500'}`}>
+                    {status}
+                  </p>
+                )}
               </div>
 
               {/* Social links */}
@@ -570,7 +604,7 @@ export default function Home() {
         isOpen={open.status}
         onClose={() => {
           setOpen({ data: NaN, status: false });
-          setMainImgIdx(0); 
+          setMainImgIdx(0);
         }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[90vh] overflow-y-auto bg-[#1a1a1a] p-4 rounded-xl">
