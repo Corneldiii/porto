@@ -51,6 +51,11 @@ import C1 from "@/public/projects/CashierCafe/C1.png";
 import C2 from "@/public/projects/CashierCafe/C2.png";
 import C3 from "@/public/projects/CashierCafe/C3.png";
 import C4 from "@/public/projects/CashierCafe/C4.png";
+
+import G1 from "@/public/projects/Gereja/G1.png";
+import G2 from "@/public/projects/Gereja/G2.png";
+import G3 from "@/public/projects/Gereja/G3.png";
+import G4 from "@/public/projects/Gereja/G4.png";
 import Link from "next/link";
 
 export default function Home() {
@@ -63,7 +68,7 @@ export default function Home() {
     status: false,
   });
 
-  const [title] = useState(["Software Developer", "Fullstack Developer", "System Analyst"])
+  const [title] = useState(["Application Developer", "Fullstack Developer", "System Analyst"])
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -102,6 +107,13 @@ export default function Home() {
       desc: "Cashier Café adalah sistem kasir sederhana yang dirancang untuk membantu proses transaksi di kafe menjadi lebih cepat, rapi, dan efisien. Fitur utamanya meliputi pencatatan pesanan, perhitungan total otomatis, pengelolaan menu, serta pencetakan struk. Sistem ini memudahkan barista dan kasir dalam melayani pelanggan, sekaligus membantu pemilik kafe memantau penjualan harian secara akurat.",
       teknologi: "React JS (Tailwinds) - Laravel",
       produksi:"Apr 2026 - Mei 2026"
+    },
+    {
+      img: [G1, G2, G3, G4],
+      judul: "Landing  Page Gereja Katolik Purbalingga",
+      desc: "Landing Page Paroki Santo Agustinus Purbalingga adalah sebuah website yang dirancang untuk menyediakan informasi lengkap mengenai kehidupan menggereja di Paroki Santo Agustinus, Purbalingga. Website ini menampilkan profil paroki, sejarah singkat, serta informasi mengenai imam yang melayani, yaitu RD. FX. Handy Kristian Adi Putra, Pr., sebagai pastor paroki. Selain itu, landing page ini menyediakan ayat Alkitab harian dan renungan rohani yang diperbarui setiap hari untuk membantu umat bertumbuh dalam iman. Pengguna juga dapat melihat jadwal misa, baik misa harian maupun mingguan, serta berbagai aktivitas paroki seperti kegiatan kategorial, pelayanan sosial, dan perayaan liturgi. Proyek ini bertujuan menjadi pusat informasi digital yang mudah diakses, informatif, dan mendukung pelayanan paroki kepada umat serta masyarakat luas.",
+      teknologi: "React JS (Tailwinds) - Laravel",
+      produksi:"Mei 2026 - On Going"
     },
   ];
 
@@ -260,7 +272,7 @@ export default function Home() {
               },
               {
                 icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 md:w-20 md:h-20 lg:w-20 lg:h-20 lg:stroke-1 lg:text-[#ff4a11] lg:opacity-40 text-[#FF4A11]"><path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" /></svg>,
-                title: "4 - Projects Created",
+                title: "5 - Projects Created",
                 judul: "",
               },
             ].map((item, i) => (
