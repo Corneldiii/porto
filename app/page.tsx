@@ -56,6 +56,13 @@ import G1 from "@/public/projects/Gereja/G1.png";
 import G2 from "@/public/projects/Gereja/G2.png";
 import G3 from "@/public/projects/Gereja/G3.png";
 import G4 from "@/public/projects/Gereja/G4.png";
+
+import M1 from "@/public/projects/MoodLy/M1.png";
+import M2 from "@/public/projects/MoodLy/M2.png";
+import M3 from "@/public/projects/MoodLy/M3.png";
+import M4 from "@/public/projects/MoodLy/M4.png";
+
+
 import Link from "next/link";
 
 export default function Home() {
@@ -63,7 +70,7 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState("");
-  
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [mainImgIdx, setMainImgIdx] = useState(0);
   const [open, setOpen] = useState({
@@ -86,43 +93,56 @@ export default function Home() {
     {
       img: [R1, R2, R3, R4],
       judul: "Kumpulan Resep Masakan (Kuresep Masak)",
-      desc: "Kuresep Masak adalah platform yang menyajikan berbagai pilihan menu dan resep masakan, mulai dari hidangan sederhana hingga menu spesial. Pengguna bisa mencari inspirasi masakan, melihat bahan serta langkah pembuatannya, dan menemukan ide menu yang sesuai dengan kebutuhan sehari-hari. Platform ini membantu siapa pun memasak dengan lebih mudah, praktis, dan terarah.",
+      desc: "Kuresep Masak is a platform that offers a wide selection of dishes and cooking recipes, ranging from simple meals to special menus. Users can search for cooking inspiration, view ingredients and preparation steps, and discover menu ideas that suit their daily needs. This platform helps anyone cook more easily, practically, and with clearer guidance.",
       teknologi: "Laravel",
-      produksi: "May 2024 - Jun 2024"
+      produksi: "May 2024 - Jun 2024",
+      link: "https://github.com/Corneldiii/ProjectResep.git"
     },
     {
       img: [L1, L2, L3, L4],
       judul: "Sistem Rekomendasi Pekerjaan (Lokerin)",
-      desc: "Lokerin adalah platform pencarian lowongan kerja yang berfokus pada pemberian rekomendasi pekerjaan paling relevan untuk setiap pengguna. Sistem ini menganalisis deskripsi lowongan serta profil atau minat pengguna, lalu menampilkan daftar peluang kerja yang paling sesuai secara otomatis. Dengan pendekatan rekomendasi yang dipersonalisasi, Lokerin membantu pencari kerja menemukan posisi yang tepat dengan lebih cepat, akurat, dan efisien.",
+      desc: "Lokerin is a job-search platform focused on delivering highly relevant job recommendations for every user. The system analyzes job descriptions along with each user’s profile or interests, then automatically displays the most suitable opportunities. With its personalized recommendation approach, Lokerin helps job seekers find the right position more quickly, accurately, and efficiently.",
       teknologi: "React Js (Tailwind) - Flask(Python)",
-      produksi: "Jun 2025 - Jan 2026"
+      produksi: "Jun 2025 - Jan 2026",
+      link: "https://github.com/Corneldiii/Lokerin.git"
     },
     {
       img: [B1, B2, B3, B4],
       judul: "Sistem Informasi Geografis (SIG Banyumas)",
-      desc: "SIG Banyumas adalah platform yang menyediakan informasi lokasi wisata secara interaktif, lengkap dengan peta digital, detail destinasi, hingga fitur pemesanan kunjungan. Pengguna dapat menjelajahi berbagai objek wisata, melihat rute terbaik melalui peta, serta melakukan booking secara langsung sehingga perencanaan perjalanan menjadi lebih mudah, cepat, dan terarah.",
+      desc: "SIG Banyumas is a platform that provides interactive tourist-location information, complete with digital maps, detailed destination descriptions, and a visit-booking feature. Users can explore various attractions, view optimal routes through the map, and make direct bookings, making trip planning easier, faster, and more organized.",
       teknologi: "Laravel",
-      produksi: "10,Jul 2024 - 18,Jul 2024"
+      produksi: "10,Jul 2024 - 18,Jul 2024",
+      link: "https://github.com/Corneldiii/Wisata-Banyumas.git"
     },
     {
       img: [C1, C2, C3, C4],
       judul: "Cashier Café",
-      desc: "Cashier Café adalah sistem kasir sederhana yang dirancang untuk membantu proses transaksi di kafe menjadi lebih cepat, rapi, dan efisien. Fitur utamanya meliputi pencatatan pesanan, perhitungan total otomatis, pengelolaan menu, serta pencetakan struk. Sistem ini memudahkan barista dan kasir dalam melayani pelanggan, sekaligus membantu pemilik kafe memantau penjualan harian secara akurat.",
+      desc: "Cashier Café is a simple cashier system designed to make café transactions faster, more organized, and efficient. Its main features include order recording, automatic total calculation, menu management, and receipt printing. The system helps baristas and cashiers serve customers more easily while also enabling café owners to accurately monitor daily sales.",
       teknologi: "React JS (Tailwinds) - Laravel",
-      produksi: "Apr 2026 - Mei 2026"
+      produksi: "Apr 2026 - Mei 2026",
+      link: "https://github.com/Corneldiii/Cashier-Cafe-Frontend.git"
     },
     {
       img: [G1, G2, G3, G4],
-      judul: "Landing  Page Gereja Katolik Purbalingga",
-      desc: "Landing Page Paroki Santo Agustinus Purbalingga adalah sebuah website yang dirancang untuk menyediakan informasi lengkap mengenai kehidupan menggereja di Paroki Santo Agustinus, Purbalingga. Website ini menampilkan profil paroki, sejarah singkat, serta informasi mengenai imam yang melayani, yaitu RD. FX. Handy Kristian Adi Putra, Pr., sebagai pastor paroki. Selain itu, landing page ini menyediakan ayat Alkitab harian dan renungan rohani yang diperbarui setiap hari untuk membantu umat bertumbuh dalam iman. Pengguna juga dapat melihat jadwal misa, baik misa harian maupun mingguan, serta berbagai aktivitas paroki seperti kegiatan kategorial, pelayanan sosial, dan perayaan liturgi. Proyek ini bertujuan menjadi pusat informasi digital yang mudah diakses, informatif, dan mendukung pelayanan paroki kepada umat serta masyarakat luas.",
+      judul: "Landing  Page Gereja Katolik Purbalingga (Unofficial)",
+      desc: "Paroki Santo Agustinus Purbalingga is a landing-page website designed to provide comprehensive information about the church’s life and activities. It features the parish profile, a brief history, and information about the priest serving the community, RD. FX. Handy Kristian Adi Putra, Pr., as the parish pastor. The site also offers daily Bible verses and spiritual reflections updated every day to support the faith growth of the congregation. Users can view the Mass schedule both daily and weekly as well as various parish activities such as catechetical programs, social services, and liturgical celebrations. This project aims to become an easily accessible and informative digital center that supports parish services for both the faithful and the wider community.",
       teknologi: "React JS (Tailwinds) - Laravel",
-      produksi: "May 2026 - May 2026"
+      produksi: "May 2026 - May 2026",
+      link: "https://github.com/Corneldiii/Landing-Page-Gereja-Katolik-Purbalingga.git"
+    },
+    {
+      img: [M1, M2, M3, M4],
+      judul: "MoodLy",
+      desc: "MoodLy is a daily journaling app that automatically analyzes users’ emotional states whenever they write by reading text content and capturing behavioral signals like typing speed, deletion frequency, and pause patterns. It visualizes these findings as a three-dimensional mood vector valence, arousal, and dominance to recommend suitable activities, music, and work styles based on the user’s mental state. With a burnout predictor that monitors seven-day mood trends and provides proactive warnings, plus features like one-tap quick check-ins and an AI-generated mood playlist, MoodLy built with Next.js, Supabase, and the Gemini API serves as a daily companion that truly understands your feelings.",
+      teknologi: "Next.js (Tailwinds) - Supabase",
+      produksi: "May 2026 - May 2026",
+      link: "https://github.com/Corneldiii/Moodly.git"
     },
   ];
 
   const sendEmail = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(); 
-    
+    e.preventDefault();
+
     if (!email || !message) {
       setStatus('Email dan pesan harus diisi dulu ya.');
       return;
@@ -141,7 +161,7 @@ export default function Home() {
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          email: email,   
+          email: email,
           message: message
         })
       });
@@ -233,7 +253,7 @@ export default function Home() {
 
               <RollingText title={title} currentIndex={currentIndex} />
 
-              <h1 className="text-xl md:text-4xl lg:text-4xl text-[#FF4A11] mt-2 lg:mt-2 font-bold lg:w-full lg:text-right  lg:pr-2 xl:pr-4">Beginner</h1>
+              <h1 className="text-xl md:text-4xl lg:text-4xl text-[#FF4A11] mt-2 lg:mt-2 font-bold lg:w-full lg:text-right  lg:pr-2 xl:pr-4">Intermediate</h1>
               <div className="w-16 h-0.5 bg-[#FF4A11] my-6 md:hidden"></div>
 
               <div className="md:hidden font-semibold max-w-sm">
@@ -287,7 +307,7 @@ export default function Home() {
               {
                 icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 md:w-20 md:h-20 lg:w-20 lg:h-20 lg:stroke-1 lg:text-[#ff4a11] lg:opacity-40 text-[#FF4A11]"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" /></svg>,
                 title: "17 October 2003",
-                judul: "23 years old",
+                judul: "22 years old",
               },
               {
                 icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 md:w-20 md:h-20 lg:w-20 lg:h-20 lg:stroke-1 lg:text-[#ff4a11] lg:opacity-40 text-[#FF4A11]"><path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" /></svg>,
@@ -296,7 +316,7 @@ export default function Home() {
               },
               {
                 icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 md:w-20 md:h-20 lg:w-20 lg:h-20 lg:stroke-1 lg:text-[#ff4a11] lg:opacity-40 text-[#FF4A11]"><path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" /></svg>,
-                title: "5 - Projects Created",
+                title: "6 - Projects Created",
                 judul: "",
               },
             ].map((item, i) => (
@@ -331,7 +351,6 @@ export default function Home() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-56 items-center">
 
-              {/* Photo single rounded untuk mobile (menggantikan dua foto miring) */}
               <div className="block w-full lg:hidden">
                 <Image src={me2} alt="Aldian" className="w-full h-72 md:h-96 rounded-4xl object-cover bg-gray-800" />
               </div>
@@ -344,7 +363,6 @@ export default function Home() {
 
               {/* Text content desktop & judul mobile */}
               <div className="col-span-1 flex flex-col justify-center">
-                {/* Desktop Titles (Hidden on Mobile) */}
                 <div className="hidden lg:flex flex-col mb-10">
                   <h1 className="text-[75px] xl:text-[90px] font-extrabold text-white leading-none tracking-tight">Aldian</h1>
                   <h1 className="text-[42px] xl:text-[50px] font-bold text-[#FF4A11] leading-tight">Octavius Soesanto</h1>
@@ -360,7 +378,7 @@ export default function Home() {
                 <div className="mb-8 lg:mb-12 w-full">
                   <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#FF4A11] mb-4 lg:mb-8">Education</h1>
                   <div className="bg-[#121212] lg:bg-transparent lg:p-0 rounded-3xl p-5 flex items-start gap-5 lg:flex-row lg:justify-between lg:items-center">
-                    <div className="border border-[#FF4A11] rounded-full p-2 flex items-center justify-center flex-shrink-0 lg:hidden">
+                    <div className="border border-[#FF4A11] rounded-full p-2 flex items-center justify-center shrink-0 lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#FF4A11]"><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814" /></svg>
                     </div>
                     <div className="lg:w-full lg:flex lg:justify-between lg:items-center">
@@ -381,18 +399,16 @@ export default function Home() {
                   <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#FF4A11] mb-4 lg:mb-8">Language</h1>
                   <div className="bg-[#121212] lg:bg-transparent lg:p-0 rounded-3xl p-5 flex flex-col lg:flex-row lg:justify-between lg:items-center">
 
-                    {/* Mobile Wrapper */}
                     <div className="flex justify-between items-center py-2 lg:hidden">
                       <span className="text-white text-sm md:text-base font-semibold">Bahasa Indonesia</span>
                       <span className="text-[#FF4A11] text-sm md:text-base font-medium">Fluent</span>
                     </div>
-                    <div className="w-full h-[1px] bg-[#222] my-2 lg:hidden"></div>
+                    <div className="w-full h-px bg-[#222] my-2 lg:hidden"></div>
                     <div className="flex justify-between items-center py-2 lg:hidden">
                       <span className="text-white text-sm md:text-base font-semibold">English</span>
                       <span className="text-[#FF4A11] text-sm md:text-base font-medium">Beginner</span>
                     </div>
 
-                    {/* Desktop Flex Language Format */}
                     <div className="hidden lg:flex lg:justify-between lg:w-full lg:items-center">
                       <h1 className="text-gray-400 text-xl">Bahasa Indonesia - <span className="text-white font-bold">Fluent</span></h1>
                       <h1 className="text-gray-400 text-xl">English - <span className="text-white font-bold">Beginner</span></h1>
@@ -401,7 +417,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* What I Do Section (Mobile Only as per design differences, but wrapped nicely if needed) */}
                 <div className="mb-10 w-full lg:hidden">
                   <h1 className="text-xl md:text-2xl font-bold text-[#FF4A11] mb-4">What I Do</h1>
                   <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
@@ -432,12 +447,124 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── WORK EXPERIENCE ── */}
+        <section className="flex flex-col justify-center items-center w-full h-fit my-12 md:my-20 lg:my-24" id="experience">
+          <div className="container w-full h-full px-5 md:px-10 lg:px-20 max-w-screen-2xl">
+
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-1">
+              Work <span className="text-[#FF4A11]">Experience</span>
+            </h1>
+            <p className="text-gray-400 text-sm md:text-base mb-8 lg:mb-14">
+              The Story of My Professional Growth
+            </p>
+
+            <div className="relative flex flex-col gap-0 max-w-4xl">
+
+              <div className="absolute left-4 md:left-5 top-0 bottom-0 w-px bg-[#2a2a2a] z-0" />
+
+              {[
+                {
+                  role: "Full Stack",
+                  company: "Freelance",
+                  location: "Purbalingga",
+                  period: "Jul 2024 – Jul 2024",
+                  type: "Freelance",
+                  desc: [
+                    "Built a digital system for managing incoming/outgoing letters and memos",
+                    "Shifted document processing from paper-based to system-based workflows.",
+                    "Improved internal document distribution and tracking.",
+                  ],
+                  tech: ["PHP", "CodeIgniter 3", "Bootstrap", "Git"]
+                },
+                {
+                  role: "Software Engineer / Programmer",
+                  company: "PT. Percetakan Kanisius",
+                  location: "Yogyakarta",
+                  period: "Feb 2025 – Jun 2025",
+                  type: "Internship",
+                  desc: [
+                    "Built a digital system for managing incoming/outgoing letters and memos",
+                    "Shifted document processing from paper-based to system-based workflows.",
+                    "Improved internal document distribution and tracking.",
+                  ],
+                  tech: ["PHP", "CodeIgniter 3", "Bootstrap", "Git"],
+                },
+                {
+                  role: "Teaching Assistant / Query Language",
+                  company: "Universitas Sanata Dharma",
+                  location: "Yogyakarta",
+                  period: "Aug 2024 – Dec 2024",
+                  type: "Part-time",
+                  desc: [
+                    "Supported student learning by explaining essential database concepts and helping them build practical skills in SQL querying. Assisted with lab tasks, clarified complex operations, and provided feedback on query structure and logic.",
+                  ],
+                  tech: ["MySQL", "Query"],
+                },
+                {
+                  role: "Teaching Assistant / Informatics Projects",
+                  company: "Universitas Sanata Dharma",
+                  location: "Yogyakarta",
+                  period: "Aug 2024 – Dec 2024",
+                  type: "Part-time",
+                  desc: [
+                    "Supported students in building programming and information system projects. Helped them understand project workflows, apply best coding practices, and provided constructive technical feedback.",
+                  ],
+                  tech: ["ERD", "Logical Design", "MVC", "Laravel", "MySQL"],
+                },
+              ].map((exp, i) => (
+                <div key={i} className="relative flex gap-5 md:gap-8 pb-8 last:pb-0 z-10">
+
+                  <div className="flex flex-col items-center mt-1 shrink-0">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#121212] border border-[#FF4A11]/40 flex items-center justify-center z-10">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5 text-[#FF4A11]">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="flex-1 bg-[#121212] rounded-2xl p-4 md:p-5 lg:p-6 border border-[#222] hover:border-[#FF4A11]/30 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+                      <div>
+                        <h2 className="text-white font-bold text-sm md:text-base lg:text-lg">{exp.role}</h2>
+                        <p className="text-[#FF4A11] font-semibold text-xs md:text-sm mt-0.5">{exp.company}</p>
+                        <p className="text-gray-500 text-xs mt-0.5">{exp.location}</p>
+                      </div>
+                      <div className="flex flex-row md:flex-col items-start md:items-end gap-2 shrink-0">
+                        <span className="text-xs font-semibold px-3 py-1 rounded-full border border-[#FF4A11]/40 text-[#FF4A11] bg-[#FF4A11]/10 w-fit">
+                          {exp.type}
+                        </span>
+                        <span className="text-gray-400 text-xs font-medium whitespace-nowrap">{exp.period}</span>
+                      </div>
+                    </div>
+                    <div className="w-full h-px bg-[#222] mb-3" />
+                    <ul className="flex flex-col gap-1.5 mb-4">
+                      {exp.desc.map((d, j) => (
+                        <li key={j} className="flex items-start gap-2 text-gray-400 text-xs md:text-sm">
+                          <span className="text-[#FF4A11] mt-0.5 shrink-0">▸</span>
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-1.5">
+                      {exp.tech.map((t, j) => (
+                        <span key={j} className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#1e1e1e] border border-[#333] text-gray-300">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── PROJECTS ── */}
         <section className="flex flex-col justify-center items-center w-full h-fit my-16 md:my-24 lg:my-32 " id="projects">
           <div className="container w-full h-full px-5 md:px-10 lg:px-20">
             <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-[100px] xl:text-[120px] text-center font-extrabold text-white">My Recap Projects</h1>
 
-            {/* Mobile: stacked cards */}
             <div className="flex flex-col gap-6 mt-10 md:hidden">
               {project.map((p, i) => (
                 <div
@@ -453,7 +580,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Tablet: 3-col grid */}
             <div className="hidden md:grid lg:hidden grid-cols-3 gap-5 mt-10">
               {project.map((p, i) => (
                 <div
@@ -467,7 +593,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Desktop: original bento layout */}
             <div className="hidden lg:flex flex-wrap justify-center items-center mt-24 gap-10 w-full max-h-240 no-scrollbar overflow-y-scroll">
               {project.map((p, i) => (
                 <div
@@ -501,99 +626,183 @@ export default function Home() {
         </section>
 
         {/* ── GET IN TOUCH ── */}
-        <section className="flex flex-col justify-center items-center w-full h-fit my-10 md:my-24 lg:my-32 pb-10" id="getintouch">
-          <div className="container w-full h-full px-5 md:px-10 lg:px-20 py-10 bg-[#0f0f0f] md:bg-transparent rounded-4xl md:rounded-none lg:max-w-7xl lg:mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-[80px] font-bold text-center md:text-left text-white lg:mb-20">Lets Get A Talk!</h1>
+        <section
+          className="relative flex flex-col items-center w-full min-h-screen py-20 px-5 md:px-10 lg:px-20"
+          id="getintouch"
+        >
+          <div className="w-full max-w-6xl mx-auto">
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-fit mt-10 md:mt-16 gap-12 lg:gap-20">
+            {/* Heading */}
+            <p className="text-sm font-medium text-gray-500 mb-2 tracking-widest uppercase">
+              Got a project in mind? Reach out.
+            </p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-white mb-12 leading-tight">
+              Let&apos;s get a{" "}
+              <span className="text-[#FF4A11]">talk.</span>
+            </h1>
 
-              {/* Form */}
-              <div className="flex flex-col gap-6 lg:gap-8">
-                <div className="flex flex-col gap-3 lg:gap-5">
-                  <label htmlFor="emailField" className="text-sm md:text-2xl font-semibold text-gray-300">Email</label>
+            {/* Two-column grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+              {/* Form Card */}
+              <div className="bg-[#111111] border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="emailField" className="text-xs font-medium text-gray-400 uppercase tracking-widest">
+                    Email
+                  </label>
                   <input
                     type="email"
                     name="email"
                     id="emailField"
                     value={email}
-                    className="bg-[#1a1a1a] border border-[#333] w-full h-14 lg:h-16 rounded-2xl px-5 text-white focus:outline-none focus:border-[#FF4A11] lg:text-lg"
-                    placeholder="Your Email (e.g abdul@gmail.com)"
                     onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    className="bg-[#1a1a1a] border border-white/10 rounded-xl px-4 h-11 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#FF4A11] transition-colors"
                   />
                 </div>
-                <div className="flex flex-col gap-3 lg:gap-5">
-                  <label htmlFor="messageField" className="text-sm md:text-2xl font-semibold text-gray-300">Message</label>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="messageField" className="text-xs font-medium text-gray-400 uppercase tracking-widest">
+                    Message
+                  </label>
                   <textarea
                     name="message"
                     id="messageField"
                     value={message}
-                    className="bg-[#1a1a1a] border border-[#333] w-full h-40 lg:h-56 rounded-2xl p-5 text-white resize-none focus:outline-none focus:border-[#FF4A11] lg:text-lg"
-                    placeholder="Lets keep in touch"
                     onChange={(e) => setMessage(e.target.value)}
-                  ></textarea>
+                    placeholder="Tell me about your project..."
+                    className="bg-[#1a1a1a] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 resize-none h-36 focus:outline-none focus:border-[#FF4A11] transition-colors"
+                  />
                 </div>
+
                 <button
                   type="button"
                   disabled={isSubmitting}
-                  className={`w-full md:w-fit px-10 py-4 lg:px-14 lg:py-5 lg:text-lg rounded-full font-bold text-white transition-colors ${
-                    isSubmitting 
-                      ? 'bg-[#e0400f] opacity-70 cursor-not-allowed' 
-                      : 'bg-[#FF4A11] hover:bg-[#e0400f] cursor-pointer'
-                  }`}
                   onClick={sendEmail}
+                  className={`flex items-center gap-2 w-fit px-6 py-3 rounded-xl text-sm font-medium text-white transition-all ${isSubmitting
+                      ? "bg-[#c73d0e] opacity-60 cursor-not-allowed"
+                      : "bg-[#FF4A11] hover:bg-[#e0400f] active:scale-95 cursor-pointer"
+                    }`}
                 >
-                  {isSubmitting ? 'Sending...' : 'Submit'}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 2L11 13" /><path d="M22 2L15 22 11 13 2 9l20-7z" />
+                  </svg>
+                  {isSubmitting ? "Sending..." : "Send message"}
                 </button>
+
                 {status && (
-                  <p className={`text-sm mt-2 border-4 border-orange-800 rounded-4xl w-fit px-4 py-2 ${status.includes('berhasil') ? 'text-green-500' : 'text-red-500'}`}>
+                  <p className={`text-sm px-4 py-2 rounded-xl w-fit ${status.includes("berhasil")
+                      ? "bg-green-900/40 text-green-400 border border-green-800"
+                      : "bg-red-900/40 text-red-400 border border-red-800"
+                    }`}>
                     {status}
                   </p>
                 )}
               </div>
 
-              {/* Social links */}
-              <div className="flex flex-col gap-6 mt-8 md:mt-0 lg:pt-12 lg:w-200">
-                <h1 className="text-center md:text-left font-semibold text-xl md:text-3xl lg:text-4xl text-gray-300 lg:mb-6">Or maybe try another ways</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#1a1a1a] md:bg-transparent p-6 rounded-3xl md:p-0  w-full">
-                  <div className="flex flex-col gap-5 lg:gap-8 lg:w-full ">
-                    <a href="https://www.instagram.com/corneldiii/" className="flex items-center gap-4 lg:gap-6 group">
-                      <Image src={sm1} alt="Instagram" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
-                      <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">@Corneldiii</h1>
-                    </a>
-                    <a href="https://www.x.com/nyamukBerisik" className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
-                      <Image src={sm2} alt="Twitter" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
-                      <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">@nyamukBerisik</h1>
-                    </a>
-                    <div className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
-                      <Image src={sm4} alt="WhatsApp" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
-                      <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">+62 85640835130</h1>
+              {/* Social Card */}
+              <div className="bg-[#111111] border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col">
+                <p className="text-xs font-medium text-gray-500 uppercase tracking-widest mb-5 pb-4 border-b border-white/10">
+                  Or reach me on
+                </p>
+
+                <div className="flex flex-col gap-1">
+                  {/* Instagram */}
+                  <a
+                    href="https://www.instagram.com/corneldiii/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors group"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0">
+                      <Image src={sm1} alt="Instagram" className="invert w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-white">Instagram</p>
+                      <p className="text-xs text-gray-500">@Corneldiii</p>
+                    </div>
+                  </a>
+
+                  {/* Twitter */}
+                  <a
+                    href="https://www.x.com/nyamukBerisik"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors group"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0">
+                      <Image src={sm2} alt="Twitter" className="invert w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-white">Twitter / X</p>
+                      <p className="text-xs text-gray-500">@nyamukBerisik</p>
+                    </div>
+                  </a>
+
+                  {/* WhatsApp */}
+                  <div className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors cursor-default">
+                    <div className="w-9 h-9 rounded-lg bg-green-500/10 flex items-center justify-center shrink-0">
+                      <Image src={sm4} alt="WhatsApp" className="invert w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-white">WhatsApp</p>
+                      <p className="text-xs text-gray-500">+62 856 4083 5130</p>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-5 lg:gap-8">
-                    <a href="https://www.tiktok.com/@notmeiswearrrrr" className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
-                      <Image src={sm3} alt="TikTok" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
-                      <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">@tireknodon</h1>
-                    </a>
-                    <a href="https://www.linkedin.com/in/aldian-soesanto-b7194531a/" className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
-                      <Image src={sm5} alt="LinkedIn" className="invert w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 group-hover:scale-110 transition-transform" />
-                      <h1 className="text-white font-medium text-sm md:text-xl lg:text-2xl group-hover:text-[#FF4A11] transition-colors">Aldian Octavius</h1>
-                    </a>
-                    <div className="flex items-center gap-4 lg:gap-6 group cursor-pointer">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14 shrink-0 text-white group-hover:scale-110 group-hover:text-[#FF4A11] transition-all">
+
+                  {/* TikTok */}
+                  <a
+                    href="https://www.tiktok.com/@notmeiswearrrrr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors group"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0">
+                      <Image src={sm3} alt="TikTok" className="invert w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-white">TikTok</p>
+                      <p className="text-xs text-gray-500">@tireknodon</p>
+                    </div>
+                  </a>
+
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/in/aldian-soesanto-b7194531a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors group"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0">
+                      <Image src={sm5} alt="LinkedIn" className="invert w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-white">LinkedIn</p>
+                      <p className="text-xs text-gray-500">Aldian Octavius</p>
+                    </div>
+                  </a>
+
+                  {/* Email */}
+                  <div className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-colors cursor-default">
+                    <div className="w-9 h-9 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                       </svg>
-                      <h1 className="text-white font-medium text-sm md:text-lg lg:text-xl break-all group-hover:text-[#FF4A11] transition-colors">aldianocta178@gmail.com</h1>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-white">Email</p>
+                      <p className="text-xs text-gray-500">aldianocta178@gmail.com</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Footer */}
-          <div className="flex flex-col items-center justify-center mt-10 md:mt-20 mb-6 absolute bottom-0 text-xs lg:text-sm text-gray-500">
-            <p>© 2024 Aldian Octavius Soesanto</p>
-            <p>All rights reserved.</p>
+            {/* Footer */}
+            <div className="flex flex-col sm:flex-row items-center justify-between mt-12 pt-6 border-t border-white/10 gap-2">
+              <p className="text-xs text-gray-600">© 2024 Aldian Octavius Soesanto</p>
+              <p className="text-xs text-gray-600">All rights reserved.</p>
+            </div>
           </div>
         </section>
 
@@ -602,71 +811,148 @@ export default function Home() {
       {/* ── MODAL ── */}
       <Modal
         isOpen={open.status}
-        onClose={() => {
-          setOpen({ data: NaN, status: false });
-          setMainImgIdx(0);
-        }}
+        onClose={() => { setOpen({ data: NaN, status: false }); setMainImgIdx(0); }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[90vh] overflow-y-auto bg-[#1a1a1a] p-4 rounded-xl">
-          <div className="flex flex-col gap-3">
+        {!isNaN(open.data) && (
+          <div className="flex flex-col md:flex-row h-full max-h-[92vh] md:max-h-[88vh]">
 
-            <div className="relative w-full h-64 md:h-106 rounded-xl overflow-hidden transition-all duration-300">
-              {!isNaN(open.data) && (
+            <div className="relative w-full md:w-[65%] bg-[#0a0a0a] flex flex-col gap-3 p-4 md:p-6 shrink-0">
+
+              {/* Close button mobile */}
+              <button
+                className="md:hidden absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/60 border border-[#333] flex items-center justify-center text-white hover:border-[#FF4A11] transition-colors"
+                onClick={() => { setOpen({ data: NaN, status: false }); setMainImgIdx(0); }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {/* Main image */}
+              <div className="relative w-full aspect-video md:aspect-auto md:flex-1 rounded-2xl overflow-hidden border border-[#222]">
                 <Image
-                  src={project[open.data]?.img[mainImgIdx]}
+                  src={project[open.data].img[mainImgIdx]}
                   alt=""
                   fill
-                  className="object-cover border border-[#333]"
+                  className="object-cover transition-all duration-300"
                 />
-              )}
-            </div>
+                <div className="absolute top-3 left-3 bg-[#FF4A11] text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Project {open.data + 1}
+                </div>
+              </div>
 
-            <div className="grid grid-cols-3 gap-2">
-              {!isNaN(open.data) && [0, 1, 2, 3]
-                .filter((idx) => idx !== mainImgIdx)
-                .map((idx) => (
-                  <div
+              {/* Thumbnails */}
+              <div className="flex gap-2 md:gap-3">
+                {project[open.data].img.map((img, idx) => (
+                  <button
                     key={idx}
-                    className="relative w-full h-24 md:h-32 rounded-lg overflow-hidden cursor-pointer hover:opacity-70 transition-opacity"
                     onClick={() => setMainImgIdx(idx)}
+                    className={`relative flex-1 aspect-video rounded-xl overflow-hidden border transition-all duration-200 ${mainImgIdx === idx
+                      ? "border-[#FF4A11] opacity-100 scale-[1.03]"
+                      : "border-[#222] opacity-50 hover:opacity-80"
+                      }`}
                   >
-                    <Image
-                      src={project[open.data]?.img[idx]}
-                      alt=""
-                      fill
-                      className="object-cover border border-[#333] "
-                    />
-                  </div>
+                    <Image src={img} alt="" fill className="object-cover" />
+                  </button>
                 ))}
+              </div>
             </div>
 
-          </div>
+            <div className="flex flex-col flex-1 min-h-0 overflow-y-auto">
 
-          <div className="px-2 md:px-4 py-2">
-            <h1 className="text-gray-300 font-semibold text-sm md:text-base text-center lg:text-2xl">
-              {!isNaN(open.data) && project[open.data]?.judul}
-            </h1>
-            <h1 className="text-gray-400 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl lg:mt-10">
-              {!isNaN(open.data) && project[open.data]?.desc}
-            </h1>
-            <div className="w-full h-fit flex flex-col justify-between items-start">
-              <h1 className="text-gray-50 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl lg:mt-10">
-                Teknologi :
-              </h1>
-              <h1 className="text-gray-400 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl">
-                {!isNaN(open.data) && project[open.data]?.teknologi}
-              </h1>
-            </div>
-            <div className="w-full h-fit flex flex-col justify-between items-start">
-              <h1 className="text-gray-50 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl lg:mt-10">
-                Produksi :
-              </h1>
-              <h1 className="text-gray-400 font-semibold text-sm md:text-base text-justify lg:w-full lg:text-xl">
-                {!isNaN(open.data) && project[open.data]?.produksi}
-              </h1>
+              {/* Close button desktop */}
+              <div className="hidden md:flex justify-end p-5 pb-0 shrink-0">
+                <button
+                  className="w-9 h-9 rounded-full border border-[#333] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#FF4A11] transition-colors"
+                  onClick={() => { setOpen({ data: NaN, status: false }); setMainImgIdx(0); }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-5 p-5 md:p-6 md:pt-4">
+                <div>
+                  <p className="text-[#FF4A11] text-xs font-semibold uppercase tracking-widest mb-1">
+                    {project[open.data].produksi}
+                  </p>
+                  <h2 className="text-white font-bold text-lg md:text-xl lg:text-2xl leading-snug">
+                    {project[open.data].judul}
+                  </h2>
+                </div>
+
+                <div className="w-full h-px bg-[#222]" />
+                <div>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">About</p>
+                  <p className="text-gray-400 text-sm md:text-base leading-relaxed text-justify">
+                    {project[open.data].desc}
+                  </p>
+                </div>
+
+                <div className="w-full h-px bg-[#222]" />
+
+                <div>
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Tech Stack</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project[open.data].teknologi.split(" - ").map((t, i) => (
+                      <span
+                        key={i}
+                        className="text-xs font-medium px-3 py-1.5 rounded-full bg-[#1a1a1a] border border-[#333] text-gray-300 hover:border-[#FF4A11]/50 hover:text-white transition-colors"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+
+
+                <div className="w-full h-px bg-[#222]" />
+                <div className="">
+                  <p className="test-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Repositories</p>
+                  <div className=" flex gap-5 justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github size-5" viewBox="0 0 16 16">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                    <a href={project[open.data].link} className="text-[#FF4A11] hover:text-[#eb715e] font-semibold text-xs">{project[open.data].link}</a>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between pt-2 mt-auto">
+                  <button
+                    onClick={() => { setOpen({ data: (open.data - 1 + project.length) % project.length, status: true }); setMainImgIdx(0); }}
+                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#FF4A11] transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-full border border-[#333] group-hover:border-[#FF4A11]/50 flex items-center justify-center transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                      </svg>
+                    </div>
+                    Prev
+                  </button>
+
+                  <span className="text-xs text-gray-600 font-medium">
+                    {open.data + 1} / {project.length}
+                  </span>
+
+                  <button
+                    onClick={() => { setOpen({ data: (open.data + 1) % project.length, status: true }); setMainImgIdx(0); }}
+                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#FF4A11] transition-colors group"
+                  >
+                    Next
+                    <div className="w-8 h-8 rounded-full border border-[#333] group-hover:border-[#FF4A11]/50 flex items-center justify-center transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </Modal>
     </div>
   );
