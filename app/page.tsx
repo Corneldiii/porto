@@ -25,6 +25,9 @@ import skl15 from "@/public/Skills/Postman.svg";
 import skl16 from "@/public/Skills/Docker.svg";
 import skl17 from "@/public/Skills/CI.svg";
 import skl18 from "@/public/Skills/Git.svg";
+import skl19 from "@/public/Skills/prisma.svg";
+import skl20 from "@/public/Skills/supabase.svg";
+import skl21 from "@/public/Skills/postgresql.svg";
 
 import sm1 from "@/public/socialMedia/instagram.svg";
 import sm2 from "@/public/socialMedia/twitter-x.svg";
@@ -62,6 +65,11 @@ import M2 from "@/public/projects/MoodLy/M2.png";
 import M3 from "@/public/projects/MoodLy/M3.png";
 import M4 from "@/public/projects/MoodLy/M4.png";
 
+import A1 from "@/public/projects/Absensi/A1.png";
+import A2 from "@/public/projects/Absensi/A2.png";
+import A3 from "@/public/projects/Absensi/A3.png";
+import A4 from "@/public/projects/Absensi/A4.png";
+
 
 import Link from "next/link";
 
@@ -78,7 +86,7 @@ export default function Home() {
     status: false,
   });
 
-  const [title] = useState(["Application Developer", "Fullstack Developer", "System Analyst"])
+  const [title] = useState(["Application Developer", "Fullstack Developer", "System Analyst", "Vibe Coding"])
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -137,6 +145,14 @@ export default function Home() {
       teknologi: "Next.js (Tailwinds) - Supabase",
       produksi: "May 2026 - May 2026",
       link: "https://github.com/Corneldiii/Moodly.git"
+    },
+    {
+      img: [A1, A2, A3, A4],
+      judul: "School Digital Attendance",
+      desc: "School Digital Attendance System is a modern web application built with Next.js and Prisma ORM, designed to automate, accelerate, and improve the accuracy of student attendance tracking through Barcode and QR Code scanning technology. Adopting a clean, bright, and premium Royal Blue School visual theme, this project seamlessly integrates live asynchronous scanning that automatically manages the camera stream upon detection, a responsive master data management panel for student profiles, and an analytical dashboard providing real-time daily attendance statistics alongside convenient report export features to Excel and PDF formats.",
+      teknologi: "Next.js (Tailwinds) - Neon - Prisma",
+      produksi: "May 2026 - May 2026",
+      link: "https://github.com/Corneldiii/Absensi-App.git"
     },
   ];
 
@@ -436,7 +452,7 @@ export default function Home() {
               <h1 className="text-xl md:text-4xl lg:text-[50px] font-bold text-[#FF4A11]">Skills</h1>
               <div className="mt-6 lg:mt-12 bg-[#121212] lg:bg-transparent w-full rounded-3xl md:rounded-[40px] py-4 px-4 md:px-8 lg:px-0 overflow-x-auto no-scrollbar lg:flex lg:justify-center">
                 <div className="flex gap-3 md:gap-4 lg:gap-8 w-max py-2 lg:flex-wrap lg:justify-center lg:max-w-6xl">
-                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14, skl15, skl16, skl17, skl18].map((skl, i) => (
+                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14, skl15, skl16, skl17, skl18, skl19, skl20, skl21].map((skl, i) => (
                     <div key={i} className="bg-[#1e1e1e] lg:bg-[#1a1a1a] flex justify-center items-center w-14 h-14 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-xl lg:rounded-3xl shrink-0 hover:scale-110 transition-transform cursor-pointer">
                       <Image src={skl} alt="" className="w-7 h-7 md:w-12 md:h-12 lg:w-14 lg:h-14" />
                     </div>
@@ -474,7 +490,7 @@ export default function Home() {
                     "Shifted document processing from paper-based to system-based workflows.",
                     "Improved internal document distribution and tracking.",
                   ],
-                  tech: ["PHP", "CodeIgniter 3", "Bootstrap", "Git"]
+                  tech: ["PHP", "Laravel", "Bootstrap", "Git", "MySql"]
                 },
                 {
                   role: "Software Engineer / Programmer",
@@ -487,7 +503,7 @@ export default function Home() {
                     "Shifted document processing from paper-based to system-based workflows.",
                     "Improved internal document distribution and tracking.",
                   ],
-                  tech: ["PHP", "CodeIgniter 3", "Bootstrap", "Git"],
+                  tech: ["PHP", "CodeIgniter 3", "Bootstrap", "Git", "MySql"],
                 },
                 {
                   role: "Teaching Assistant / Query Language",
