@@ -28,6 +28,10 @@ import skl18 from "@/public/Skills/Git.svg";
 import skl19 from "@/public/Skills/prisma.svg";
 import skl20 from "@/public/Skills/supabase.svg";
 import skl21 from "@/public/Skills/postgresql.svg";
+import skl22 from "@/public/Skills/claude.png";
+import skl23 from "@/public/Skills/chatGPT.png";
+import skl24 from "@/public/Skills/gemini.png";
+import skl25 from "@/public/Skills/deepseek.png";
 
 import sm1 from "@/public/socialMedia/instagram.svg";
 import sm2 from "@/public/socialMedia/twitter-x.svg";
@@ -70,6 +74,11 @@ import A2 from "@/public/projects/Absensi/A2.png";
 import A3 from "@/public/projects/Absensi/A3.png";
 import A4 from "@/public/projects/Absensi/A4.png";
 
+import RPG1 from "@/public/projects/RPG/R1.png";
+import RPG2 from "@/public/projects/RPG/R2.png";
+import RPG3 from "@/public/projects/RPG/R3.png";
+import RPG4 from "@/public/projects/RPG/R4.png";
+
 
 import Link from "next/link";
 
@@ -99,17 +108,9 @@ export default function Home() {
 
   const project = [
     {
-      img: [R1, R2, R3, R4],
-      judul: "Kumpulan Resep Masakan (Kuresep Masak)",
-      desc: "Kuresep Masak is a platform that offers a wide selection of dishes and cooking recipes, ranging from simple meals to special menus. Users can search for cooking inspiration, view ingredients and preparation steps, and discover menu ideas that suit their daily needs. This platform helps anyone cook more easily, practically, and with clearer guidance.",
-      teknologi: "Laravel",
-      produksi: "May 2024 - Jun 2024",
-      link: "https://github.com/Corneldiii/ProjectResep.git"
-    },
-    {
       img: [L1, L2, L3, L4],
       judul: "Sistem Rekomendasi Pekerjaan (Lokerin)",
-      desc: "Lokerin is a job-search platform focused on delivering highly relevant job recommendations for every user. The system analyzes job descriptions along with each user’s profile or interests, then automatically displays the most suitable opportunities. With its personalized recommendation approach, Lokerin helps job seekers find the right position more quickly, accurately, and efficiently.",
+      desc: "Lokerin is a job-search platform designed to deliver highly relevant and personalized job recommendations for every user. The system analyzes job descriptions together with each user’s profile, interests, and career preferences to automatically present the most suitable opportunities. With its smart, recommendation-driven approach, Lokerin helps job seekers discover positions more quickly, accurately, and efficiently. It not only streamlines the search process but also encourages users to explore roles they may not have considered before. Over time, Lokerin aims to become a trusted hub for anyone seeking tailored, effective, and insightful career guidance.",
       teknologi: "React Js (Tailwind) - Flask(Python)",
       produksi: "Jun 2025 - Jan 2026",
       link: "https://github.com/Corneldiii/Lokerin.git"
@@ -117,7 +118,7 @@ export default function Home() {
     {
       img: [B1, B2, B3, B4],
       judul: "Sistem Informasi Geografis (SIG Banyumas)",
-      desc: "SIG Banyumas is a platform that provides interactive tourist-location information, complete with digital maps, detailed destination descriptions, and a visit-booking feature. Users can explore various attractions, view optimal routes through the map, and make direct bookings, making trip planning easier, faster, and more organized.",
+      desc: "SIG Banyumas is a platform that provides comprehensive and interactive tourism information, equipped with digital maps, detailed destination descriptions, and an integrated visit-booking feature. Users can explore a wide range of attractions, discover recommended spots, and view optimal routes directly through the map for easier navigation. The platform also allows travelers to make bookings instantly, helping them plan trips more efficiently and stay organized. With its user-friendly design and complete set of features, SIG Banyumas enhances the overall travel experience by making destination discovery simpler, faster, and more intuitive.",
       teknologi: "Laravel",
       produksi: "10,Jul 2024 - 18,Jul 2024",
       link: "https://github.com/Corneldiii/Wisata-Banyumas.git"
@@ -125,7 +126,7 @@ export default function Home() {
     {
       img: [C1, C2, C3, C4],
       judul: "Cashier Café",
-      desc: "Cashier Café is a simple cashier system designed to make café transactions faster, more organized, and efficient. Its main features include order recording, automatic total calculation, menu management, and receipt printing. The system helps baristas and cashiers serve customers more easily while also enabling café owners to accurately monitor daily sales.",
+      desc: "Cashier Café is a simple yet effective cashier system designed to streamline café transactions, making the ordering and payment process faster, more organized, and highly efficient. It offers essential features such as order recording, automatic total calculation, menu management, and receipt printing, allowing baristas and cashiers to serve customers with ease and accuracy. The system also helps café owners monitor daily sales in a clear and structured way, ensuring better oversight of business performance. With its practical and user-friendly design, Cashier Café supports smoother operations and contributes to a more professional and enjoyable customer experience.",
       teknologi: "React JS (Tailwinds) - Laravel",
       produksi: "Apr 2026 - Mei 2026",
       link: "https://github.com/Corneldiii/Cashier-Cafe-Frontend.git"
@@ -153,6 +154,14 @@ export default function Home() {
       teknologi: "Next.js (Tailwinds) - Neon - Prisma",
       produksi: "May 2026 - May 2026",
       link: "https://github.com/Corneldiii/Absensi-App.git"
+    },
+    {
+      img: [RPG1, RPG2, RPG3, RPG4],
+      judul: "RPG Game turn-based Medieval Era",
+      desc: "This RPG Battle project is a browser-based turn-based game built with TypeScript as the primary language, Phaser.js as the game framework handling sprites, animations, and scenes, and Vite as the bundler and dev server. It applies pure OOP principles — every character is modeled through a class hierarchy where Character serves as the base class, with Hero and Enemy each extending it, and all four elements (Fire, Earth, Water, Wind) having their own subclasses with hardcoded stats and skills. The player controls a party of 4 heroes with different elements to battle enemies in a turn-based combat system, where each hero has unique skills of type damage, ultimate, heal, or buff that consume MP, alongside an elemental weakness system (Fire → Earth → Water → Wind → Fire) that influences damage calculation. The game visuals are rendered over a multi-layered parallax background with per-frame PNG sprites for heroes and spritesheets for monsters, while the UI is designed as a transparent overlay so the background and characters remain fully visible — hero stats panels on the left, enemy panel on the top right, and the skill list appearing dynamically below the active hero card.",
+      teknologi: "Typescript - Phaser.js - Vite - OOP - Claude AI - Gemini AI (Image)",
+      produksi: "May 2026 - May 2026",
+      link: "https://github.com/Corneldiii/RPG-Game.git"
     },
   ];
 
@@ -452,7 +461,7 @@ export default function Home() {
               <h1 className="text-xl md:text-4xl lg:text-[50px] font-bold text-[#FF4A11]">Skills</h1>
               <div className="mt-6 lg:mt-12 bg-[#121212] lg:bg-transparent w-full rounded-3xl md:rounded-[40px] py-4 px-4 md:px-8 lg:px-0 overflow-x-auto no-scrollbar lg:flex lg:justify-center">
                 <div className="flex gap-3 md:gap-4 lg:gap-8 w-max py-2 lg:flex-wrap lg:justify-center lg:max-w-6xl">
-                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14, skl15, skl16, skl17, skl18, skl19, skl20, skl21].map((skl, i) => (
+                  {[skl1, skl2, skl3, skl4, skl5, skl6, skl7, skl8, skl9, skl10, skl11, skl12, skl13, skl14, skl15, skl16, skl17, skl18, skl19, skl20, skl21, skl22, skl23, skl24 ,skl25].map((skl, i) => (
                     <div key={i} className="bg-[#1e1e1e] lg:bg-[#1a1a1a] flex justify-center items-center w-14 h-14 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-xl lg:rounded-3xl shrink-0 hover:scale-110 transition-transform cursor-pointer">
                       <Image src={skl} alt="" className="w-7 h-7 md:w-12 md:h-12 lg:w-14 lg:h-14" />
                     </div>
@@ -832,7 +841,7 @@ export default function Home() {
         {!isNaN(open.data) && (
           <div className="flex flex-col md:flex-row h-full max-h-[92vh] md:max-h-[88vh]">
 
-            <div className="relative w-full md:w-[65%] bg-[#0a0a0a] flex flex-col gap-3 p-4 md:p-6 shrink-0">
+            <div className="relative w-full md:w-[75%] bg-[#0a0a0a] flex flex-col gap-3 p-4 md:p-6 shrink-0 ">
 
               {/* Close button mobile */}
               <button
@@ -850,7 +859,7 @@ export default function Home() {
                   src={project[open.data].img[mainImgIdx]}
                   alt=""
                   fill
-                  className="object-cover transition-all duration-300"
+                  className="object-fill transition-all duration-300"
                 />
                 <div className="absolute top-3 left-3 bg-[#FF4A11] text-white text-xs font-bold px-3 py-1 rounded-full">
                   Project {open.data + 1}
@@ -874,7 +883,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col flex-1 min-h-0 overflow-y-auto">
+            <div className="flex flex-col flex-1 min-h-0 overflow-y-auto no-scrollbar">
 
               {/* Close button desktop */}
               <div className="hidden md:flex justify-end p-5 pb-0 shrink-0">
